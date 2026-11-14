@@ -91,13 +91,15 @@ Alt: Ilustrasi konsep: helm dan pelindung bahu warna perunggu, di manekin seteng
 
 | Nama file |
 | --- |
-| `armor-futuristik-putih-biru-konsep` |
+| `armor-futuristik-abu-toska-konsep` |
 
 ```
-Sci-fi armor costume: white hard-shell EVA-foam plates with blue accent panels over a black bodysuit, chest piece, shoulder guards, forearm and shin guards, clean panel lines. Front view, full body.
+Sci-fi armor costume: matte charcoal gray hard-shell EVA-foam plates with teal glowing-line accents over a dark gray bodysuit, asymmetric design with one large shoulder guard, angular chest piece, forearm and shin guards. Not white, no trooper-style armor. Front view, full body.
 ```
 
-Alt: Ilustrasi konsep: armor futuristik putih dengan aksen biru, di manekin.
+Alt: Ilustrasi konsep: armor futuristik abu tua dengan aksen toska, di manekin.
+
+Catatan: versi pertama (putih dengan aksen biru) ditolak karena mirip prajurit dari film fiksi ilmiah terkenal.
 
 ## Props (3 gambar)
 
@@ -123,13 +125,15 @@ Alt: Ilustrasi konsep: props tongkat sihir dengan kristal toska, di atas dudukan
 
 | Nama file |
 | --- |
-| `props-perisai-bundar-biru-konsep` |
+| `props-perisai-hijau-perunggu-konsep` |
 
 ```
-Handmade cosplay prop round shield made of EVA foam: blue painted face with a silver rim and a simple abstract star emblem, visible brush strokes and light weathering, leaning on a small display stand. Front view.
+Handmade cosplay prop kite-shaped shield made of EVA foam: dark green painted face with a bronze rim and an abstract leaf-vine relief pattern, no star, no circle emblem, visible brush strokes and light weathering, leaning on a small display stand. Front view.
 ```
 
-Alt: Ilustrasi konsep: props perisai bundar biru dengan tepi perak, di atas dudukan.
+Alt: Ilustrasi konsep: props perisai hijau tua dengan tepi perunggu, di atas dudukan.
+
+Catatan: versi pertama (bundar biru dengan bintang) ditolak karena mirip perisai tokoh superhero terkenal.
 
 ## Catatan
 

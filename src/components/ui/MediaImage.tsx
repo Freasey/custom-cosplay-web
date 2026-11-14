@@ -22,7 +22,7 @@ export function MediaImage({ image, priority = false, sizes, className = "" }: M
         sizes={sizes}
         loading={priority ? "eager" : "lazy"}
         fetchPriority={priority ? "high" : "auto"}
-        className="h-full w-full object-cover"
+        className={`h-full w-full object-cover ${priority ? "object-top" : ""}`}
       />
       <ImageBadge kind={image.kind} className="absolute left-3 top-3" />
     </figure>
