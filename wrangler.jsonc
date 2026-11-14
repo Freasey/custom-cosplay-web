@@ -1,0 +1,10 @@
+{
+  // Deploy situs statis (folder out/) ke Cloudflare Workers lewat `npx wrangler deploy`.
+  // `name` harus sama dengan nama proyek di dashboard Cloudflare.
+  "name": "custom-cosplay-web",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}

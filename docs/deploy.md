@@ -19,13 +19,16 @@ Jangan deploy ke Vercel paket Hobby. Paket itu dibatasi untuk pemakaian non-kome
 - Folder output: `out`
 - Versi Node: tetapkan lewat file `.nvmrc` (LTS terbaru).
 
-## Pengaturan Cloudflare Pages
+## Pengaturan Cloudflare
 
-- Sambungkan repo GitHub ini, branch produksi `prod`.
-- Framework preset: Next.js (Static HTML Export).
+Proyek dibuat sebagai Workers (bukan Pages) dengan nama `custom-cosplay-web`. Situs statis dilayani dari folder `out/` sesuai `wrangler.jsonc`.
+
+- Git repository: repo GitHub ini, production branch `prod`.
 - Build command: `npm run build`
-- Build output directory: `out`
-- Pasang domain di tab Custom domains setelah domain dibeli.
+- Deploy command: `npx wrangler deploy`
+- Root directory: `/`
+- Kalau build gagal karena versi Node, tambah variabel build `NODE_VERSION` dengan nilai `22`.
+- Pasang domain di tab Domains setelah domain dibeli.
 
 ## Variabel lingkungan
 
