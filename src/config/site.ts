@@ -32,11 +32,11 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  brandName: "[NAMA BRAND]",
+  brandName: "Cospwork Id",
   tagline:
     "Jasa custom cosplay untuk kostum kain, armor, dan props. Konsultasi dan pemesanan lewat WhatsApp.",
   domain: "[DOMAIN]",
-  whatsappNumber: "[NOMOR WHATSAPP]",
+  whatsappNumber: "6281717812783",
   whatsappMessage:
     "Halo, saya mau tanya custom cosplay. Karakter: ... Tanggal dipakai: ...",
   startingPrices: {

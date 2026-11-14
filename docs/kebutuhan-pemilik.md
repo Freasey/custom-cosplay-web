@@ -2,7 +2,10 @@
 
 Situs sudah jalan dengan placeholder. Begitu data di bawah dikirim, nilainya dimasukkan ke `src/config/site.ts` dan `src/content/gallery.ts`, lalu situs siap rilis.
 
-Status: belum ada yang diterima.
+Status:
+
+- Diterima: nama brand (Cospwork Id), nomor WhatsApp (6281717812783).
+- Menyusul: domain, dan semua poin di bagian B sampai D.
 
 ## A. Wajib sebelum rilis
 
@@ -12,7 +15,7 @@ Status: belum ada yang diterima.
 | 2 | Nomor WhatsApp | `6281234567890` (62 di depan, tanpa +, spasi, atau 0 di depan) | Semua tombol WhatsApp |
 | 3 | Domain | `namabrand.com` | Canonical, sitemap, robots, gambar share |
 
-Catatan: selama nomor belum diisi, tombol WhatsApp membuka WhatsApp tanpa tujuan (pengunjung harus memilih kontak sendiri). Jadi situs belum boleh dipromosikan sebelum nomor diisi.
+Catatan: selama domain belum diisi, canonical, sitemap, robots, dan gambar share memakai `example.com`. Situs sudah bisa dipakai dan diuji, tapi sebaiknya domain diisi sebelum didaftarkan ke Google Search Console atau dipakai untuk iklan.
 
 ## B. Sangat disarankan sebelum iklan jalan
 
