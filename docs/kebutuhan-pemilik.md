@@ -5,7 +5,9 @@ Situs sudah jalan dengan placeholder. Begitu data di bawah dikirim, nilainya dim
 Status:
 
 - Diterima: nama brand (Cospwork Id), nomor WhatsApp (6281717812783).
-- Menyusul: domain, dan semua poin di bagian B sampai D.
+- Diputuskan: harga tidak ditampilkan, pengunjung diajak diskusi lewat WhatsApp (poin 4 tidak perlu diisi).
+- Diputuskan: Instagram dan TikTok belum dibuat, fokus dulu ke Google. Tautannya tersembunyi sampai URL diisi (poin 7 ditunda).
+- Menyusul: domain, dan gambar (pemilik membuat dari `docs/prompt-gambar.md`).
 
 ## A. Wajib sebelum rilis
 

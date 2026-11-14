@@ -32,7 +32,7 @@ export function Services() {
                   context={service.name}
                   className="mt-auto inline-flex min-h-11 items-center gap-1.5 pt-3 text-caption-lg font-semibold text-ink-soft transition-colors duration-150 hover:text-primary-hover"
                 >
-                  Tanya {service.name.toLowerCase()}
+                  Diskusikan {service.name.toLowerCase()}
                   <ArrowRightIcon size={16} />
                 </WhatsAppLink>
               </Card>
@@ -41,8 +41,8 @@ export function Services() {
         </ul>
 
         <p id="harga" className="mt-6 max-w-[640px] text-caption-lg text-muted">
-          Harga pasti kami berikan setelah melihat referensinya, karena tiap kostum berbeda tingkat
-          kesulitannya.
+          Harga bergantung pada barang yang kamu inginkan: desain, bahan, dan tingkat kesulitannya.
+          Kirim referensinya lewat WhatsApp, kami hitungkan untukmu.
         </p>
       </Container>
     </section>

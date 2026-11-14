@@ -20,8 +20,8 @@ export type SiteConfig = {
   whatsappMessage: string;
   /**
    * Harga mulai per layanan dalam rupiah, contoh: 350000.
-   * Biarkan null selama belum ada daftar harga dari pengrajin:
-   * kartu layanan akan menampilkan "Harga lewat konsultasi".
+   * Keputusan pemilik: harga tidak ditampilkan dulu, jadi biarkan null.
+   * Kartu layanan akan menampilkan "Harga dibahas saat konsultasi".
    */
   startingPrices: Record<ServiceKey, number | null>;
   /** URL lengkap akun media sosial. Kosongkan ("") untuk menyembunyikan. */

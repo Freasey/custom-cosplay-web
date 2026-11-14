@@ -37,3 +37,4 @@ npm run check:release  # gagal kalau masih ada placeholder di out/
 - `docs/seo.md`: keyword dan metadata.
 - `docs/deploy.md`: build dan deploy ke Cloudflare Pages.
 - `docs/kebutuhan-pemilik.md`: data yang dibutuhkan dari pemilik.
+- `docs/prompt-gambar.md`: prompt AI untuk gambar hero dan galeri.

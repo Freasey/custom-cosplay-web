@@ -20,10 +20,10 @@ Urutan bagian dari atas ke bawah. Tiap bagian punya `id` supaya bisa dituju dari
 - Label: LAYANAN
 - H2: Apa saja yang bisa dibuat
 - Tiga kartu:
-  - Kostum kain. Seragam, gaun, jubah, dan pakaian karakter. Mulai [HARGA].
-  - Armor. Pelindung badan, helm, dan bagian keras lainnya. Mulai [HARGA].
-  - Props. Senjata tiruan, aksesori, dan perlengkapan. Mulai [HARGA].
-- Catatan di bawah kartu: Harga pasti kami berikan setelah melihat referensinya, karena tiap kostum berbeda tingkat kesulitannya.
+  - Kostum kain. Seragam, gaun, jubah, dan pakaian karakter. Harga dibahas saat konsultasi.
+  - Armor. Pelindung badan, helm, dan bagian keras lainnya. Harga dibahas saat konsultasi.
+  - Props. Senjata tiruan, aksesori, dan perlengkapan. Harga dibahas saat konsultasi.
+- Catatan di bawah kartu: Harga bergantung pada barang yang kamu inginkan: desain, bahan, dan tingkat kesulitannya. Kirim referensinya lewat WhatsApp, kami hitungkan untukmu.
 
 ### 3. Cara pesan (`#cara-pesan`)
 

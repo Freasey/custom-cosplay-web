@@ -33,7 +33,7 @@ Kode harus tetap jalan saat variabel ini kosong.
 ## Sebelum rilis
 
 - [ ] `brandName`, `domain`, `whatsappNumber` di `src/config/site.ts` sudah diisi pemilik.
-- [ ] Tidak ada teks `[NAMA BRAND]` atau `[HARGA]` yang tersisa di halaman, kecuali harga yang memang ditampilkan sebagai "Harga lewat konsultasi".
+- [ ] Tidak ada teks `[NAMA BRAND]` atau `[HARGA]` yang tersisa di halaman, kecuali harga yang memang ditampilkan sebagai "Harga dibahas saat konsultasi".
 - [ ] Semua gambar AI punya badge "Ilustrasi konsep".
 - [ ] Tautan WhatsApp membuka chat dengan pesan awal yang benar di HP.
 - [ ] Lighthouse mobile memenuhi target di `CLAUDE.md`.

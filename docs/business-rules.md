@@ -53,6 +53,7 @@ Kompensasi keterlambatan belum diputuskan pemilik. Jangan menulis janji kompensa
 
 ## Harga
 
-- Hanya ditampilkan sebagai "Mulai [HARGA]" per jenis layanan.
+- Keputusan pemilik: harga tidak ditampilkan dulu, karena sangat bergantung pada barang yang dipesan. Kartu layanan menampilkan "Harga dibahas saat konsultasi" dan mengajak diskusi lewat WhatsApp.
+- Kalau suatu saat ditampilkan, formatnya hanya "Mulai [HARGA]" per jenis layanan.
 - Angka diisi pemilik di `src/config/site.ts` setelah menerima daftar harga dari pengrajin.
-- Selama belum diisi, kartu layanan menampilkan "Harga lewat konsultasi" dan bukan angka karangan.
+- Selama belum diisi, tidak ada angka karangan.
