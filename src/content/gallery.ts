@@ -22,16 +22,22 @@ export type GalleryImage = {
 /**
  * Gambar utama hero. Isi null kalau belum ada gambar:
  * hero menampilkan kotak gambar kosong.
- * Sumber: frame depan dari video yang dikirim pemilik (720p).
+ * Sumber: frame pertama video hero, dipakai sebagai poster.
  */
 export const heroImage: GalleryImage | null = {
   src: "/images/hero-armor-perak-jubah-hitam-konsep.webp",
   alt: "Armor perak berukir dengan jubah hitam, dipasang di manekin, latar abu polos",
   category: "armor",
   kind: "concept",
-  width: 600,
-  height: 720,
+  width: 640,
+  height: 640,
 };
+
+/**
+ * Video hero (tanpa suara, berulang). Isi null untuk menampilkan gambar saja.
+ * `heroImage` dipakai sebagai poster dan menentukan badge.
+ */
+export const heroVideoSrc: string | null = "/images/hero-armor-perak-jubah-hitam-konsep.mp4";
 
 /**
  * Isi galeri #contoh. Kalau kosong, galeri menampilkan kotak gambar kosong

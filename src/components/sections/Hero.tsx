@@ -1,6 +1,8 @@
-import { heroImage } from "@/content/gallery";
+import { preload } from "react-dom";
+import { heroImage, heroVideoSrc } from "@/content/gallery";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { HeroVideo } from "@/components/ui/HeroVideo";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { WhatsAppButton } from "@/components/ui/WhatsAppLink";
@@ -8,6 +10,9 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppLink";
 const assurances = ["DP 50%", "Foto progres selama produksi", "Kirim ke seluruh Indonesia"];
 
 export function Hero() {
+  // Poster video ditemukan browser belakangan, jadi dimuat lebih awal supaya hero cepat tampil.
+  if (heroImage && heroVideoSrc) preload(heroImage.src, { as: "image", fetchPriority: "high" });
+
   return (
     <section id="hero" aria-labelledby="hero-title" className="pb-14 pt-8 md:pb-20 md:pt-14">
       <Container className="grid items-center gap-8 md:grid-cols-2 md:gap-10">
@@ -37,7 +42,9 @@ export function Hero() {
           </ul>
         </div>
 
-        {heroImage ? (
+        {heroImage && heroVideoSrc ? (
+          <HeroVideo poster={heroImage} videoSrc={heroVideoSrc} className="h-[360px] md:h-[420px]" />
+        ) : heroImage ? (
           <MediaImage
             image={heroImage}
             priority

@@ -7,7 +7,7 @@ Status:
 - Diterima: nama brand (Cospwork Id), nomor WhatsApp (6281717812783).
 - Diputuskan: harga tidak ditampilkan, pengunjung diajak diskusi lewat WhatsApp (poin 4 tidak perlu diisi).
 - Diputuskan: Instagram dan TikTok belum dibuat, fokus dulu ke Google. Tautannya tersembunyi sampai URL diisi (poin 7 ditunda).
-- Diterima: gambar hero (frame dari video) dan 7 gambar galeri.
+- Diterima: video hero (diputar tanpa suara, berulang) dan 7 gambar galeri.
 - Ditahan: gambar perisai (mirip perisai tokoh superhero terkenal) dan armor sci-fi putih biru (mirip prajurit dari film fiksi ilmiah terkenal). Perlu dibuat ulang, prompt baru ada di `docs/prompt-gambar.md`.
 - Menyusul: domain, 2 gambar pengganti, dan opsional gambar hero diam beresolusi lebih tinggi.
 
