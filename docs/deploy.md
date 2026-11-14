@@ -6,6 +6,12 @@ Cloudflare Pages, paket gratis, dengan domain sendiri. Situs sepenuhnya statis.
 
 Jangan deploy ke Vercel paket Hobby. Paket itu dibatasi untuk pemakaian non-komersial, sedangkan situs ini mempromosikan jasa berbayar.
 
+## Branch
+
+- `main`: khusus perencanaan (panduan dan dokumen). Tidak di-deploy.
+- `dev`: pengembangan dan pengujian. Semua perubahan kode dan unggahan bahan masuk ke sini dulu.
+- `prod`: yang tayang. Hanya diisi dari `dev` setelah lolos build, lint, dan pengecekan.
+
 ## Build
 
 - `next.config`: `output: 'export'`, `images: { unoptimized: true }`, `trailingSlash: true`.
@@ -15,7 +21,7 @@ Jangan deploy ke Vercel paket Hobby. Paket itu dibatasi untuk pemakaian non-kome
 
 ## Pengaturan Cloudflare Pages
 
-- Sambungkan repo GitHub ini, branch produksi `main`.
+- Sambungkan repo GitHub ini, branch produksi `prod`.
 - Framework preset: Next.js (Static HTML Export).
 - Build command: `npm run build`
 - Build output directory: `out`
