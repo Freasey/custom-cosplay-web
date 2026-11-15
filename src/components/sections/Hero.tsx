@@ -18,11 +18,11 @@ export function Hero() {
       <Container className="grid items-center gap-8 md:grid-cols-2 md:gap-10">
         <div>
           <h1 id="hero-title" className="text-hero md:text-hero-lg">
-            Kostum custom untuk karakter favoritmu
+            Jasa custom cosplay untuk karakter favoritmu
           </h1>
           <p className="mt-4 text-lead text-ink-soft md:text-lead-lg">
-            Kirim referensi, ukuran, dan tanggal event. Harga dan estimasi pengerjaan kami kabari
-            lewat WhatsApp.
+            Jasa pembuatan kostum cosplay: kain, armor, dan props. Kirim referensi, ukuran, dan
+            tanggal event. Harga dan estimasinya kami kabari lewat WhatsApp.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">

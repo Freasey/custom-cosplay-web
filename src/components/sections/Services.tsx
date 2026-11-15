@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { services } from "@/content/services";
 import { startingPriceLabel } from "@/lib/format";
@@ -13,8 +14,8 @@ export function Services() {
       <Container>
         <SectionHeading id="layanan-title" label="Layanan" title="Apa saja yang bisa dibuat">
           <p>
-            Jasa custom cosplay untuk kostum kain, armor, dan props. Semua dikerjakan pengrajin
-            berpengalaman sesuai referensi dan ukuranmu.
+            Kostum kain, armor, dan props. Semua dikerjakan pengrajin berpengalaman sesuai referensi
+            dan ukuranmu.
           </p>
         </SectionHeading>
 
@@ -27,14 +28,24 @@ export function Services() {
                 <p className="mt-4 font-semibold text-primary">
                   {startingPriceLabel(siteConfig.startingPrices[service.key])}
                 </p>
-                <WhatsAppLink
-                  location="layanan"
-                  context={service.name}
-                  className="mt-auto inline-flex min-h-11 items-center gap-1.5 pt-3 text-caption-lg font-semibold text-ink-soft transition-colors duration-150 hover:text-primary-hover"
-                >
-                  Diskusikan {service.name.toLowerCase()}
-                  <ArrowRightIcon size={16} />
-                </WhatsAppLink>
+                <div className="mt-auto flex flex-wrap items-center gap-x-5 pt-3">
+                  <Link
+                    href={`/${service.slug}/`}
+                    className="inline-flex min-h-11 items-center gap-1.5 text-caption-lg font-semibold text-primary transition-colors duration-150 hover:text-primary-hover"
+                  >
+                    Lihat detail
+                    <span className="sr-only"> {service.name.toLowerCase()}</span>
+                    <ArrowRightIcon size={16} />
+                  </Link>
+                  <WhatsAppLink
+                    location="layanan"
+                    context={service.name}
+                    className="inline-flex min-h-11 items-center text-caption-lg font-semibold text-ink-soft underline-offset-4 transition-colors duration-150 hover:text-primary-hover hover:underline"
+                  >
+                    Diskusikan
+                    <span className="sr-only"> {service.name.toLowerCase()}</span>
+                  </WhatsAppLink>
+                </div>
               </Card>
             </li>
           ))}

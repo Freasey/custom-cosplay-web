@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { services } from "@/content/services";
 import { Container } from "@/components/ui/Container";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { InstagramIcon, TikTokIcon, WhatsAppIcon } from "@/components/ui/icons";
@@ -21,6 +22,13 @@ export function Footer() {
 
           <nav aria-label="Tautan footer">
             <ul className="flex flex-col gap-1">
+              {services.map((service) => (
+                <li key={service.slug}>
+                  <Link href={`/${service.slug}/`} className={linkClass}>
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <Link href="/syarat/" className={linkClass}>
                   Syarat pemesanan

@@ -6,6 +6,16 @@ export type FaqItem = {
 /** Dipakai di bagian FAQ dan structured data FAQPage. */
 export const faqItems: FaqItem[] = [
   {
+    question: "Bisa bikin kostum cosplay dari karakter apa saja?",
+    answer:
+      "Bisa, selama ada gambar referensinya. Kirim gambarnya dulu lewat WhatsApp, nanti kami cek tingkat kesulitannya dan kabari harganya.",
+  },
+  {
+    question: "Harus datang untuk ukur badan?",
+    answer:
+      "Tidak perlu. Kami melayani custom cosplay dari seluruh Indonesia lewat WhatsApp. Kamu cukup mengirim ukuran badan sesuai daftar di bagian \"Sebelum chat, siapkan ini\".",
+  },
+  {
     question: "Berapa lama pengerjaannya?",
     answer:
       "Tergantung tingkat kesulitan dan antrian saat itu. Estimasi kami berikan bersama penawaran harga, jadi sebutkan tanggal event-mu sejak awal.",

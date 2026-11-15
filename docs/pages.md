@@ -8,7 +8,7 @@ Urutan bagian dari atas ke bawah. Tiap bagian punya `id` supaya bisa dituju dari
 
 ### 1. Hero
 
-- H1: Kostum custom untuk karakter favoritmu
+- H1: Jasa custom cosplay untuk karakter favoritmu
 - Sub: Kirim referensi, ukuran, dan tanggal event. Harga dan estimasi pengerjaan kami kabari lewat WhatsApp.
 - Tombol primary: Konsultasi gratis (menuju WhatsApp)
 - Tombol secondary: Lihat cara pesan (menuju `#cara-pesan`)
@@ -89,6 +89,14 @@ Semua tombol memakai satu helper yang menghasilkan `https://wa.me/<nomor>?text=<
 > Halo, saya mau tanya custom cosplay. Karakter: ... Tanggal dipakai: ...
 
 Tombol di bagian yang berbeda boleh menambahkan konteks ke pesan (misalnya nama layanan dari kartu yang diklik).
+
+## Halaman layanan (`/kostum-kain/`, `/armor/`, `/props/`)
+
+Dibuat atas permintaan pemilik untuk SEO: tiap keyword layanan punya halaman sendiri. Isi dari `src/content/services.ts`.
+
+- H1 memuat keyword: "Jasa jahit kostum cosplay custom", "Custom armor cosplay", "Props cosplay custom".
+- Urutan: pembuka dan tombol WhatsApp, "Yang bisa dibuat" dan "Yang perlu kamu kirim", gambar kategori itu dari galeri, cara pesan, pertanyaan khusus layanan, ajakan penutup, tautan ke layanan lain.
+- Tidak menyebut jenis bahan tertentu atau angka harga. Bahan ditulis di penawaran.
 
 ## Halaman yang belum dibuat
 
