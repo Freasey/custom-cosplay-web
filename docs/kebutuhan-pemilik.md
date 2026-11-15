@@ -48,7 +48,7 @@ Catatan: selama domain belum diisi, canonical, sitemap, robots, dan gambar share
 
 ## C. Opsional
 
-8. **Logo**: persegi, SVG atau PNG minimal 512 x 512 px. Dipakai sebagai favicon dan logo di data Google. Sekarang masih ikon sementara (gantungan baju biru).
+8. **Logo**: sudah diterima dan dipasang (favicon, header, data Google).
 9. **Kalimat deskripsi footer**. Draf sekarang: "Jasa custom cosplay untuk kostum kain, armor, dan props. Konsultasi dan pemesanan lewat WhatsApp."
 10. **Pesan awal WhatsApp**. Draf sekarang: "Halo, saya mau tanya custom cosplay. Karakter: ... Tanggal dipakai: ..."
 

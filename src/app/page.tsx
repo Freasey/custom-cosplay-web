@@ -22,7 +22,7 @@ function structuredData() {
         "@id": organizationId,
         name: siteConfig.brandName,
         url: `${siteUrl}/`,
-        logo: `${siteUrl}/icon.svg`,
+        logo: `${siteUrl}/logo.png`,
         ...(sameAs.length > 0 ? { sameAs } : {}),
       },
       {

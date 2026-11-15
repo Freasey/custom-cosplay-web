@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Container } from "@/components/ui/Container";
@@ -17,8 +18,16 @@ export function Header() {
       <Container className="flex h-16 items-center justify-between gap-4">
         <Link
           href="/"
-          className="flex min-h-11 items-center font-heading text-[18px] font-bold text-ink"
+          className="flex min-h-11 items-center gap-2.5 font-heading text-[18px] font-bold text-ink"
         >
+          <Image
+            src="/images/logo-cospwork.webp"
+            alt=""
+            width={32}
+            height={32}
+            loading="eager"
+            className="size-8"
+          />
           {siteConfig.brandName}
         </Link>
 
