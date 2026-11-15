@@ -9,7 +9,8 @@ Status:
 - Diputuskan: Instagram dan TikTok belum dibuat, fokus dulu ke Google. Tautannya tersembunyi sampai URL diisi (poin 7 ditunda).
 - Diterima: video hero (diputar tanpa suara, berulang) dan 7 gambar galeri.
 - Ditahan: gambar perisai (mirip perisai tokoh superhero terkenal) dan armor sci-fi putih biru (mirip prajurit dari film fiksi ilmiah terkenal). Perlu dibuat ulang, prompt baru ada di `docs/prompt-gambar.md`.
-- Menyusul: domain, 2 gambar pengganti, dan opsional gambar hero diam beresolusi lebih tinggi.
+- Diterima: domain `cosp.worksell.id` (sudah live).
+- Menyusul: 2 gambar pengganti, dan opsional gambar hero diam beresolusi lebih tinggi.
 
 ## A. Wajib sebelum rilis
 
