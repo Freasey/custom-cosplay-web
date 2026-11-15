@@ -26,6 +26,16 @@ function structuredData() {
         ...(sameAs.length > 0 ? { sameAs } : {}),
       },
       {
+        // Nama situs yang ditampilkan Google di hasil pencarian.
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        name: siteConfig.brandName,
+        alternateName: siteConfig.brandName.replace(/\s+/g, ""),
+        url: `${siteUrl}/`,
+        inLanguage: "id-ID",
+        publisher: { "@id": organizationId },
+      },
+      {
         "@type": "Service",
         serviceType: "Jasa pembuatan kostum cosplay custom",
         name: "Jasa custom cosplay",
