@@ -2,10 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Sora } from "next/font/google";
 import { siteConfig, siteUrl } from "@/config/site";
 import { homeTitle, pageMetadata, siteDescription } from "@/content/seo";
-import { Analytics } from "@/components/Analytics";
-import { Footer } from "@/components/sections/Footer";
-import { Header } from "@/components/sections/Header";
-import { FloatingWhatsApp } from "@/components/sections/FloatingWhatsApp";
+import { mediaOrigin } from "@/content/gallery";
 import "./globals.css";
 
 const sora = Sora({
@@ -38,19 +35,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id" className={`${sora.variable} ${jakarta.variable}`}>
-      <body className="antialiased">
-        <a
-          href="#isi"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-button focus:bg-primary focus:px-4 focus:py-3 focus:font-semibold focus:text-white"
-        >
-          Langsung ke isi
-        </a>
-        <Header />
-        <main id="isi">{children}</main>
-        <Footer />
-        <FloatingWhatsApp />
-        <Analytics />
-      </body>
+      <head>
+        {/* Gambar dan video disimpan di Vercel Blob: sambungan dibuka lebih awal supaya hero cepat tampil. */}
+        {mediaOrigin ? <link rel="preconnect" href={mediaOrigin} /> : null}
+      </head>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

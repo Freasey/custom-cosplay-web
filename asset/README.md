@@ -1,5 +1,5 @@
 # asset
 
-Tempat pemilik mengunggah bahan mentah (file zip berisi gambar) ke branch `dev`.
+Folder ini tidak dipakai lagi untuk unggah gambar.
 
-Setelah diunggah, zip diekstrak, gambarnya dikonversi ke WebP dan dipindah ke `public/images/`, lalu file zip dihapus. Folder ini tidak ikut ke hasil build.
+Gambar hero, galeri, dan logo sekarang diunggah lewat halaman `/admin` dan disimpan di Vercel Blob. Lihat `docs/admin.md`.

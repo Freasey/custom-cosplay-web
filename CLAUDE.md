@@ -1,6 +1,6 @@
 # Custom Cosplay Web
 
-Website landing page untuk jasa custom cosplay (kostum kain, armor, props) dengan target pembeli di Indonesia. Tujuan utamanya satu: pengunjung menekan tombol WhatsApp untuk konsultasi. Tidak ada keranjang, checkout, atau login.
+Website landing page untuk jasa custom cosplay (kostum kain, armor, props) dengan target pembeli di Indonesia. Tujuan utamanya satu: pengunjung menekan tombol WhatsApp untuk konsultasi. Tidak ada keranjang, checkout, atau login untuk pengunjung. Satu-satunya login adalah halaman `/admin` untuk pemilik mengelola gambar (lihat `docs/admin.md`).
 
 Nama brand, nomor WhatsApp, domain, dan harga belum final. Semua nilai itu dibaca dari satu file konfigurasi (lihat "Konfigurasi situs"), jangan ditulis langsung di komponen.
 
@@ -10,14 +10,18 @@ Nama brand, nomor WhatsApp, domain, dan harga belum final. Semua nilai itu dibac
 - `docs/pages.md`: struktur halaman, urutan bagian, dan teks tiap bagian.
 - `docs/business-rules.md`: aturan bisnis yang memengaruhi isi situs (alur pesan, DP, label gambar).
 - `docs/seo.md`: keyword, metadata, structured data.
-- `docs/deploy.md`: build statis dan deploy ke Cloudflare Pages.
+- `docs/deploy.md`: build statis dan deploy ke Cloudflare Workers.
+- `docs/admin.md`: halaman admin, penyimpanan gambar di Vercel Blob, dan alur terbit.
 
 ## Stack
 
 - Next.js (App Router) versi stabil terbaru, TypeScript, Tailwind CSS.
 - Wajib static export (`output: 'export'` di `next.config`). Jangan pakai fitur yang butuh server: API routes, server actions, middleware, ISR, atau `next/image` tanpa `unoptimized`.
+- Semua halaman publik wajib prerender jadi HTML lengkap. Isi yang penting untuk SEO (teks, gambar, alt, structured data) tidak boleh dimuat lewat JavaScript di browser. Data media diambil dari Vercel Blob saat build (`scripts/pull-media.ts`), bukan saat halaman dibuka.
 - Font dari `next/font/google`: Sora (judul) dan Plus Jakarta Sans (isi).
-- Tanpa backend dan tanpa database. Semua konversi lewat tautan `https://wa.me/`.
+- Tanpa backend untuk pengunjung. Semua konversi lewat tautan `https://wa.me/`.
+- Satu-satunya kode server adalah Worker admin di `worker/` (rute `/admin*` dan `/api/*`). Jangan menambah kode server untuk halaman publik.
+- Gambar dan video disimpan di Vercel Blob, bukan di `public/`. File di `public/` dan `src/app/` hanya ikon situs, `logo.png` untuk structured data, dan file verifikasi.
 - Tanpa library UI besar. Komponen ditulis sendiri sesuai `docs/design-system.md`.
 
 ## Struktur yang diharapkan
@@ -25,14 +29,16 @@ Nama brand, nomor WhatsApp, domain, dan harga belum final. Semua nilai itu dibac
 ```
 src/
   app/
-    layout.tsx        metadata, font, header, footer
-    page.tsx          beranda (semua bagian)
-    syarat/page.tsx   syarat pemesanan dan DP
+    layout.tsx        metadata dan font
+    (site)/           halaman publik: layout header dan footer, beranda, halaman layanan, syarat
+    admin/            halaman admin (dijaga login oleh Worker)
   components/         satu file per bagian dan per komponen UI
   config/site.ts      nama brand, nomor WA, domain, harga mulai
   content/            data galeri, layanan, FAQ, langkah pesan
-public/
-  images/             foto asli dan ilustrasi konsep
+  content/media.json  salinan data media versi terbit (ditulis ulang otomatis saat build)
+  lib/                kode bersama situs, Worker, dan skrip (skema media, klien Blob)
+worker/               Worker Cloudflare untuk login dan API admin
+scripts/              skrip build dan pemeriksaan rilis
 ```
 
 ## Konfigurasi situs

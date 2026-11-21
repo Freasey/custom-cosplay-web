@@ -5,7 +5,9 @@
  * Ganti dengan nilai asli sebelum rilis (lihat docs/deploy.md, "Sebelum rilis").
  */
 
-export type ServiceKey = "kain" | "armor" | "props";
+import type { ServiceKey } from "@/lib/media";
+
+export type { ServiceKey };
 
 export type SiteConfig = {
   /** Nama brand, tampil di header, footer, judul halaman, dan metadata. */

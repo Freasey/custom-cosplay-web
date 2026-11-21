@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { logo } from "@/content/gallery";
 import { Container } from "@/components/ui/Container";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { WhatsAppIcon } from "@/components/ui/icons";
@@ -21,7 +22,7 @@ export function Header() {
           className="flex min-h-11 items-center gap-2.5 font-heading text-[18px] font-bold text-ink"
         >
           <Image
-            src="/images/logo-cospwork.webp"
+            src={logo.src}
             alt=""
             width={32}
             height={32}

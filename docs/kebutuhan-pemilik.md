@@ -54,7 +54,7 @@ Catatan: selama domain belum diisi, canonical, sitemap, robots, dan gambar share
 
 ## D. Nanti, setelah rilis
 
-11. **Google Analytics 4** Measurement ID (`G-XXXXXXX`) dan/atau **Google Ads** ID (`AW-XXXXXXX`). Diisi sebagai variabel lingkungan di Cloudflare Pages, bukan di kode.
+11. **Google Analytics 4** Measurement ID (`G-XXXXXXX`) dan/atau **Google Ads** ID (`AW-XXXXXXX`). Diisi sebagai build variable di Cloudflare Workers, bukan di kode.
 12. **Keputusan kompensasi keterlambatan**. Tidak ditampilkan di situs sampai diputuskan.
 13. **Testimoni asli** (dengan izin pembeli). Bagian testimoni baru dibuat setelah ada.
 

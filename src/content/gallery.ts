@@ -1,117 +1,40 @@
-import type { ServiceKey } from "@/config/site";
+import { validateManifest, type GalleryImage, type LogoImage } from "@/lib/media";
+import data from "./media.json";
+
+export type { GalleryImage, ImageKind } from "@/lib/media";
+export { imageAlt, sortedGallery } from "@/lib/media";
 
 /**
- * `real`: foto asli hasil produksi, badge "Foto hasil asli".
- * `concept`: gambar buatan AI, badge "Ilustrasi konsep".
- * Badge ditentukan dari field ini, jangan ditulis manual di komponen.
+ * Data media situs: logo, hero, dan galeri.
+ *
+ * Sumber aslinya ada di Vercel Blob dan dikelola lewat halaman /admin.
+ * File media.json adalah salinan versi terbit yang diambil `scripts/pull-media.ts`
+ * sebelum build, jadi semua gambar sudah tertanam di HTML statis (aman untuk SEO).
+ * Jangan mengedit media.json manual kecuali untuk darurat: build berikutnya akan menimpanya.
  */
-export type ImageKind = "real" | "concept";
-
-export type GalleryImage = {
-  /** Path di folder public, contoh: "/images/armor-ksatria-biru-konsep.webp". */
-  src: string;
-  /** Deskripsi isi gambar. Untuk `concept`, awalan "Ilustrasi konsep" ditambahkan otomatis. */
-  alt: string;
-  category: ServiceKey;
-  kind: ImageKind;
-  /** Ukuran asli file dalam piksel. Rasio tampilan galeri 4:5. */
-  width: number;
-  height: number;
-};
-
-/**
- * Gambar utama hero. Isi null kalau belum ada gambar:
- * hero menampilkan kotak gambar kosong.
- * Sumber: frame pertama video hero, dipakai sebagai poster.
- */
-export const heroImage: GalleryImage | null = {
-  src: "/images/hero-armor-perak-jubah-hitam-konsep.webp",
-  alt: "Armor perak berukir dengan jubah hitam, dipasang di manekin, latar abu polos",
-  category: "armor",
-  kind: "concept",
-  width: 640,
-  height: 640,
-};
-
-/**
- * Video hero (tanpa suara, berulang). Isi null untuk menampilkan gambar saja.
- * `heroImage` dipakai sebagai poster dan menentukan badge.
- */
-export const heroVideoSrc: string | null = "/images/hero-armor-perak-jubah-hitam-konsep.mp4";
-
-/**
- * Isi galeri #contoh. Kalau kosong, galeri menampilkan kotak gambar kosong
- * per kategori. Foto `real` otomatis tampil lebih dulu daripada `concept`.
- */
-export const gallery: GalleryImage[] = [
-  {
-    src: "/images/kostum-seragam-akademi-biru-tua-konsep.webp",
-    alt: "Seragam akademi biru tua dengan jubah bahu pendek dan rok lipit, di manekin",
-    category: "kain",
-    kind: "concept",
-    width: 896,
-    height: 1200,
-  },
-  {
-    src: "/images/armor-ksatria-hitam-emas-konsep.webp",
-    alt: "Armor ksatria hitam dengan tepi emas, di manekin",
-    category: "armor",
-    kind: "concept",
-    width: 896,
-    height: 1200,
-  },
-  {
-    src: "/images/props-pedang-besar-perak-konsep.webp",
-    alt: "Props pedang besar perak dengan permata biru, di atas dudukan",
-    category: "props",
-    kind: "concept",
-    width: 896,
-    height: 1200,
-  },
-  {
-    src: "/images/kostum-gaun-penyihir-ungu-konsep.webp",
-    alt: "Gaun penyihir ungu berlapis dengan sulaman emas, di manekin",
-    category: "kain",
-    kind: "concept",
-    width: 896,
-    height: 1200,
-  },
-  {
-    src: "/images/armor-helm-pelindung-bahu-perunggu-konsep.webp",
-    alt: "Helm dan pelindung bahu warna perunggu, di manekin setengah badan",
-    category: "armor",
-    kind: "concept",
-    width: 896,
-    height: 1200,
-  },
-  {
-    src: "/images/props-tongkat-sihir-kristal-konsep.webp",
-    alt: "Props tongkat sihir dengan kristal toska, di atas dudukan",
-    category: "props",
-    kind: "concept",
-    width: 896,
-    height: 1200,
-  },
-  {
-    src: "/images/kostum-jubah-pengelana-hijau-konsep.webp",
-    alt: "Jubah pengelana hijau dengan tunik krem dan sabuk kulit, di manekin",
-    category: "kain",
-    kind: "concept",
-    width: 896,
-    height: 1200,
-  },
-];
-
-const CONCEPT_PREFIX = "Ilustrasi konsep";
-
-/** Alt yang dipakai di halaman. Ilustrasi selalu diawali "Ilustrasi konsep". */
-export function imageAlt(image: GalleryImage): string {
-  if (image.kind !== "concept") return image.alt;
-  if (image.alt.toLowerCase().startsWith(CONCEPT_PREFIX.toLowerCase())) return image.alt;
-  return `${CONCEPT_PREFIX}: ${image.alt.charAt(0).toLowerCase()}${image.alt.slice(1)}`;
+const result = validateManifest(data);
+if (!result.ok) {
+  throw new Error(`src/content/media.json tidak valid:\n- ${result.errors.join("\n- ")}`);
 }
+const manifest = result.manifest;
 
-/** Foto asli dulu, lalu ilustrasi. Urutan dalam tiap jenis dipertahankan. */
-export function sortedGallery(images: GalleryImage[] = gallery): GalleryImage[] {
-  return [...images.filter((i) => i.kind === "real"), ...images.filter((i) => i.kind === "concept")];
-}
+export const logo: LogoImage = manifest.logo;
+
+/**
+ * Gambar utama hero, sekaligus poster video. null: hero menampilkan kotak gambar kosong.
+ */
+export const heroImage: GalleryImage | null = manifest.hero.image;
+
+/** Video hero (tanpa suara, berulang). null: hanya gambar. */
+export const heroVideoSrc: string | null = manifest.hero.videoSrc;
+
+/** Isi galeri #contoh. Kalau kosong, galeri menampilkan kotak gambar kosong per kategori. */
+export const gallery: GalleryImage[] = manifest.gallery;
+
+/** Origin file media dari luar situs (Vercel Blob), untuk preconnect. null kalau semuanya lokal. */
+export const mediaOrigin: string | null = (() => {
+  const remote = [logo.src, heroImage?.src, heroVideoSrc, ...gallery.map((i) => i.src)].find(
+    (src) => src?.startsWith("https://"),
+  );
+  return remote ? new URL(remote).origin : null;
+})();

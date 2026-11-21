@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-21T08:04:07.044Z",
+  "logo": {
+    "src": "https://7bdokdtkqjf1vwsm.public.blob.vercel-storage.com/media/logo-cospwork-9AdwvbdwhklVBIduPHuV8QKq1kO7QL.webp",
+    "width": 96,
+    "height": 96
+  },
+  "hero": {
+    "image": {
+      "src": "https://7bdokdtkqjf1vwsm.public.blob.vercel-storage.com/media/hero-armor-perak-jubah-hitam-konsep-oklqrfOS90q6kgIxTWaUMOxAqlPN8M.webp",
+      "alt": "Armor perak berukir dengan jubah hitam, dipasang di manekin, latar abu polos",
+      "category": "armor",
+      "kind": "concept",
+      "width": 640,
+      "height": 640
+    },
+    "videoSrc": "https://7bdokdtkqjf1vwsm.public.blob.vercel-storage.com/media/hero-armor-perak-jubah-hitam-konsep-KxryxiCj9kgN6nznwVI0HghCl96m61.mp4"
+  },
+  "gallery": [
+    {
+      "src": "https://7bdokdtkqjf1vwsm.public.blob.vercel-storage.com/media/kostum-seragam-akademi-biru-tua-konsep-2OpyNZTO0MmqOjU7kFqbAD4UOHATzC.webp",
+      "alt": "Seragam akademi biru tua dengan jubah bahu pendek dan rok lipit, di manekin",
+      "category": "kain",
+      "kind": "concept",
+      "width": 896,
+      "height": 1200
+    },
+    {
+      "src": "https://7bdokdtkqjf1vwsm.public.blob.vercel-storage.com/media/armor-ksatria-hitam-emas-konsep-PIc0L4ndJn8XQ8ElqN1RLbQN5TuRQ7.webp",
+      "alt": "Armor ksatria hitam dengan tepi emas, di manekin",
+      "category": "armor",
+      "kind": "concept",
+      "width": 896,
+      "height": 1200
+    },
+    {
+      "src": "https://7bdokdtkqjf1vwsm.public.blob.vercel-storage.com/media/props-pedang-besar-perak-konsep-NxITeOud0Vemvbr23dtqRxHMasGORL.webp",
+      "alt": "Props pedang besar perak dengan permata biru, di atas dudukan",
+      "category": "props",
+      "kind": "concept",
+      "width": 896,
+      "height": 1200
+    },
+    {
+      "src": "https://7bdokdtkqjf1vwsm.public.blob.vercel-storage.com/media/kostum-gaun-penyihir-ungu-konsep-pjdwCeL55nNgbjfagGlB0MqRXrop19.webp",
+      "alt": "Gaun penyihir ungu berlapis dengan sulaman emas, di manekin",
+      "category": "kain",
+      "kind": "concept",
+      "width": 896,
+      "height": 1200
+    },
+    {
+      "src": "https://7bdokdtkqjf1vwsm.public.blob.vercel-storage.com/media/armor-helm-pelindung-bahu-perunggu-konsep-gUU6xCwTAWHV2ggWvq7FxE9UccF9Vu.webp",
+      "alt": "Helm dan pelindung bahu warna perunggu, di manekin setengah badan",
+      "category": "armor",
+      "kind": "concept",
+      "width": 896,
+      "height": 1200
+    },
+    {
+      "src": "https://7bdokdtkqjf1vwsm.public.blob.vercel-storage.com/media/props-tongkat-sihir-kristal-konsep-P3OgYWNltZJQIXWRkEZ4ikp8tIcy9O.webp",
+      "alt": "Props tongkat sihir dengan kristal toska, di atas dudukan",
+      "category": "props",
+      "kind": "concept",
+      "width": 896,
+      "height": 1200
+    },
+    {
+      "src": "https://7bdokdtkqjf1vwsm.public.blob.vercel-storage.com/media/kostum-jubah-pengelana-hijau-konsep-Lq1Y6NnU3CeAoqmoul1aIw5sscUkZl.webp",
+      "alt": "Jubah pengelana hijau dengan tunik krem dan sabuk kulit, di manekin",
+      "category": "kain",
+      "kind": "concept",
+      "width": 896,
+      "height": 1200
+    }
+  ]
+}

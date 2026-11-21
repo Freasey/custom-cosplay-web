@@ -2,11 +2,15 @@
   "name": "custom-cosplay-web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/pull-media.ts",
     "build": "next build",
     "lint": "eslint",
-    "check:release": "node scripts/check-release.mjs"
+    "typecheck": "tsc --noEmit && tsc -p worker/tsconfig.json",
+    "check:release": "node scripts/check-release.mjs",
+    "preview": "wrangler dev"
   },
   "dependencies": {
     "next": "16.4.6",
@@ -14,6 +18,7 @@
     "react-dom": "19.3.1"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261121.1",
     "@tailwindcss/turbopack": "4.3.5",
     "@types/node": "26.6.6",
     "@types/react": "19.3.0",
@@ -21,6 +26,7 @@
     "eslint": "10.15.0",
     "eslint-config-next": "16.4.6",
     "tailwindcss": "4.3.5",
-    "typescript": "6.0.3"
+    "typescript": "6.0.3",
+    "wrangler": "^4.166.0"
   }
 }
